@@ -1,11 +1,12 @@
-// RevStar workshop page, served as Workers static assets at presentation.meohealth.com.
+// RevStar workshop page, served as Workers static assets at presentation.meohealth.com/revstar-workshop.
 // Deploy:  npx wrangler deploy
 {
   "name": "meo-revstar-workshop",
   "account_id": "4e08ed6a0d79365d5fa8accc1b0db216",  // "Meo Health" account (meohealth.com DNS lives here)
   "compatibility_date": "2026-10-01",
   "assets": {
-    "directory": "./dist"
+    "directory": "./dist",
+    "html_handling": "drop-trailing-slash"  // /revstar-workshop serves dist/revstar-workshop/index.html
   },
   // Worker custom domain: Cloudflare creates the DNS record + certificate itself
   "routes": [
